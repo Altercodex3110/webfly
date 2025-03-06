@@ -1,0 +1,440 @@
+/* Variables */
+:root {
+    --primary: #005f73;
+    --secondary: #0a9396;
+    --accent: #ee9b00;
+    --light: #f4f4f9;
+    --dark: #001219;
+    --text-light: #fff;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========== ENCABEZADO MEJORADO ========== */
+.primary_header {
+    position: relative;
+    height: 80vh;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.header-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,95,115,0.5), rgba(10,147,150,0.3));
+}
+
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Bloque de información superior */
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+/* Estilos para clima */
+.weather-info {
+    background: rgba(0,0,0,0.3);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    animation: slideIn 0.8s ease-out;
+}
+
+.temperature {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+
+.weather-condition {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    opacity: 0.9;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Estilos para fecha/hora */
+.time-date {
+    background: rgba(255,255,255,0.15);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    z-index: 3;
+    position: relative;
+}
+
+.time {
+    font-size: 2.2rem;
+    color: var(--text-light);
+    display: block;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.date {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    opacity: 0.9;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Título principal */
+.main-title-container {
+    text-align: center;
+    margin: 8vh auto 0;
+    max-width: 800px;
+}
+
+.title {
+    color: var(--text-light);
+    font-family: 'Arial Black', sans-serif;
+    font-size: 4rem;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+    line-height: 1.1;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.title-part2 {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.divider-line {
+    width: 200px;
+    height: 3px;
+    background: var(--accent);
+    margin: 1.5rem auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.tagline {
+    color: var(--text-light);
+    font-size: 1.8rem;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-top: 1rem;
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .primary_header {
+        height: 70vh;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .title-part2 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1.4rem;
+    }
+    
+    .weather-info {
+        padding: 0.8rem 1.5rem;
+        z-index: 3;
+        position: relative;
+    }
+    
+    .temperature {
+        font-size: 2rem;
+    }
+    
+    .time {
+        font-size: 1.8rem;
+    }
+    
+    .header-info {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .title-part2 {
+        font-size: 1.6rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .time {
+        font-size: 1.5rem;
+    }
+    
+    .date {
+        font-size: 1rem;
+    }
+}
+
+/* ========== (Mantén el resto de tu CSS existente aquí) ========== */
+
+/* Variables */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+.primary_header {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.header-photo {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+/* Tarjetas de contenido */
+.content-card {
+    background: white;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 800px;
+    position: relative;
+}
+
+.content-card::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+/* Valores */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.value-card {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Fundadoras */
+.founders-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.founder-card {
+    width: 250px;
+    text-align: center;
+}
+
+.founder-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 1rem;
+    border: 4px solid var(--accent);
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Menú */
+.secondary_header {
+    background: var(--primary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+    background: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-card {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    
+    .founders-grid {
+        gap: 2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+}
