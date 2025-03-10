@@ -359,13 +359,11 @@ body {
 }
 
 .founder-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+    width: 150px;  /* Ajusta el tamaño según necesites */
+    height: 150px;
     background-size: cover;
     background-position: center;
-    margin: 0 auto 1rem;
-    border: 4px solid var(--accent);
+    border-radius: 50%;
 }
 
 /* Tipografía */
